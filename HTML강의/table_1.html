@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utp-8" />
+    <title>table</title>
+    <style media="screen">
+      th,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Monthly Savings
+      </caption>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td rowspan="2">$100</td>
+          <!--행병합 -->
+        </tr>
+        <tr>
+          <td>February</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Sum</td>
+          <!--열병합 -->
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
