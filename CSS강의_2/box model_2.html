@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>css</title>
+    <style>
+      .parent {
+        height: 200px;
+        width: 500px;
+        border: 10px solid black;
+      }
+      .child {
+        height: 50%;
+        width: 50%;
+        border: 10px solid green;
+        /* %값은 부모요소의 영향을 받음
+                width(height)(기본값 auto)은 content영역값이며 
+                박스사이징 값 : width(height) + padding*2 + border*2 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="child">box model 2 를 공부해봅시다. 박스 모델</div>
+    </div>
+  </body>
+</html>

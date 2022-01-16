@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>css</title>
+    <style media="screen">
+      * {
+        color: red;
+      } /* 0,0,0,0*/
+      h1#page {
+        color: gray;
+      } /* 0,1,0,1*/
+      h2 {
+        color: red;
+      }
+      h2 {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="page">Hello, <em>CSS</em></h1>
+    <h2>
+      margin, padding, background, border 상속 안됨 , 상속된 값은 0.0.0.0도
+      아니기 때문에 전체 선택자한테도 밀리게됨
+    </h2>
+  </body>
+</html>

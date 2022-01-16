@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <style media="screen">
+    </style>
+</head>
+<body>
+    <pre>
+    <h3> h1 { ... }   0,0,0,1 
+        body h1 { ... }   0,0,0,2 
+        .grape { ... }   0,0,1,0 
+        *.bright { ... }   0,0,1,0 
+        p.bright em.dark { ... }   0,0,2,2 
+        #page { ... }   0,1,0,0 
+        div#page { ... }   0,1,0,1 
+        
+        p#page { color: red !important; }
+        <xmp><p id="page" style="color:blue">"xmp은 태그도 출력해준다"</p> </xmp>
+        <p>&lt;p id="page" style="color:blue"&gt; "이것도 가능하다"</p>
+        1. !important (속성값 뒤)
+        2. 인라인 스타일
+        3. 아이디 속성
+        4. (가상)클래스 속성, 기타 속성
+        5. (가상)요소
+        6. 전체 선택자
+        ----
+        <예시>
+        1. p#page { color: red !important; }
+        2. <p id="page" style="color:blue">         "pre는 입력한대로(태그제외) 출력해준다" </p> 
+        3. #page { 내용 }
+        4. .grape { 내용 }
+        5. h1 { 내용 }
+        6. *{color: blue;}</h3>
+    </pre>
+</body>
+</html>
+

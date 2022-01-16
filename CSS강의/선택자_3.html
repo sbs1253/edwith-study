@@ -1,0 +1,37 @@
+<!-- 속성 선택자-->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>css</title>
+    <style>
+      p[class] {
+        color: red;
+      }
+
+      p[class][id] {
+        text-decoration: underline;
+      }
+
+      p[class="foo"] {
+        color: silver;
+      }
+
+      p[id="title"] {
+        border: 1px solid;
+      }
+
+      /*  이것도 됨
+		[class] {
+			text-decoration: line-through;
+		} */
+    </style>
+  </head>
+
+  <body>
+    <p class="foo">HELLO</p>
+    <p class="bar">CSS</p>
+    <p class="baz" id="title">HTML</p>
+  </body>
+</html>

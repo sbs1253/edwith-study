@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>display</title>
+  <style>
+    .inline {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border: 10px solid red;
+      background-color: pink;
+    }
+
+    .block {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border: 10px solid red;
+      background-color: pink;
+    }
+
+    .inline-block {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      border: 10px solid red;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div style="display: inline" class="inline">box</div>
+  </div>
+  <div>
+    <div style="display: block" class="block">box</div>
+  </div>
+  <div>
+    <div style="display: inline-block" class="inline-block">box</div>
+  </div>
+</body>
+
+</html>
+<!-- 
+- visibility: visible;  /* 보임 기본값 */
+- visibility: hidden;  /* 숨김, 자신의 박스 영역은 유지(margin까지 모두 포함) */
+- visibility: collapse; /* 셀간의 경계를 무시하고 숨김(박스영역 없음, 테이블의 행과 열 요소에만 지정 가능, 그 외 요소 지정은 hidden과 같음) */ -->

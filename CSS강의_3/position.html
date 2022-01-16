@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>position</title>
+    <style>
+      .sibling {
+        padding: 5px;
+        background-color: #eee;
+        text-align: center;
+      }
+
+      .parent {
+        border: 1px dashed #aaa;
+        padding: 10px;
+      }
+
+      .child,
+      .child_offset {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background-color: #dc3636;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        border: 1px solid #333;
+      }
+
+      .child_offset {
+        background-color: #3677dc;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .absolute {
+        position: absolute;
+      }
+
+      .fixed {
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>position (Offset 미지정)</h1>
+    <h2>static (기본)</h2>
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <div class="child static">static</div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>relative</h2>
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <div class="child relative">relative</div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>absolute</h2>
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <!-- absolute, fixed는 inline요소일때 display:block으로 변경시킴. inline-block 값을 임의 지정했을 때는 그 값을 유지함. -->
+      <span class="child absolute">absolute</span>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>fixed</h2>
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <!-- 현재 fixed는 offset값이 없어 뷰포트 밖으로 밀려나오면서 화면 아래로 사라짐 -->
+      <div class="child fixed">fixed</div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h1>position (Offset 지정)</h1>
+    <h2>static -</h2>
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <div class="child_offset static" style="top: 40px; right: 40px">
+        static <br />top: 40, left: 40
+      </div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>relative</h2>
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <div class="child_offset relative" style="top: 40px; left: 40px">
+        relative <br />top: 40, left: 40
+      </div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>absolute - parent relative</h2>
+    <div class="parent relative">
+      <div class="sibling">Sibling 1</div>
+      <div class="child_offset absolute" style="top: 40px; left: 80px">
+        absolute<br />top: 40, left: 80
+      </div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>fixed</h2>
+    <!-- 부모가 fixed여도 별개로 위치함 -->
+    <div class="parent">
+      <div class="sibling">Sibling 1</div>
+      <div class="child_offset fixed" style="top: 100px; left: 80%">
+        fixed<br />top:100, left:80%
+      </div>
+      <div class="sibling">Sibling 2</div>
+    </div>
+  </body>
+</html>
+<!-- 
+  *static (position의 기본값)값은  offset값이 적용되지 않음 , 정상 흐름대로 배열
+- relative: 상대위치 , 주변요소에 영향을 주지 않으면서 이동
+- absolute 값은 부모영역에 영향을 받음(부모가 static값이 아닐때 사용), 기준점은 parent의 border영역을 제외한 영역 padding 부터 (0.0)
+- fixed 값은 viewport 의 고정값으로 화면이 움직일때도 고정되어있음 (부모영향 없음) 
+-->

@@ -1,0 +1,40 @@
+<!-- class 선택자, id 선택자(유일한 요소) -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>css</title>
+    <style>
+        .color {
+            color: purple;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        #id-selector {
+            font-size: 30px;
+        }
+
+        .color.underline {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <dl>
+        <dt class="color">HTML</dt>
+        <dd><span class="color">HTML</span>은 문서의 구조를 나타냅니다.</dd>
+        <dt class="underline">CSS</dt>
+        <dd><span class="underline">CSS</span>는 문서의 표현을 나타냅니다.</dd>
+        <dt class="color underline"> JS </dt>
+        <dd><span class="color underline">JS</span>는 문서의 동작을 나타냅니다.</dd>
+    </dl>
+    <p id="id-selector"> id 선택자는 해쉬 기호를 사용합니다.</p>
+</body>
+
+</html>

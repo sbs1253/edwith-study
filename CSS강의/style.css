@@ -1,0 +1,5 @@
+/* 첫 줄에는 문자 깨짐을 방지하기 위해 맨위에 @charset "UTF8"; 작성한다 */
+@charset "UTF8";
+p {
+  color: blue;
+}

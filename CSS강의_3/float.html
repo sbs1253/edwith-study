@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>float</title>
+    <style>
+      .container {
+        width: 400px;
+        padding: 15px;
+        border: 1px dashed #aaa;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+      }
+      .container div:nth-child(1) {
+        background-color: green;
+      }
+      .container div:nth-child(2) {
+        background-color: skyblue;
+      }
+      .container span {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>요소를 보통의 흐름에서 벗어나 띄워지게 함</h2>
+    <div class="container">
+      <div style="float: right">Box1</div>
+      <div style="border: 2px solid gray">Box2</div>
+    </div>
+    <h2>주변 텍스트나 인라인요소가 주위를 감싸는 특징이 있음.</h2>
+    <div class="container">
+      <div style="float: left">Box1</div>
+      <div style="float: right">Box2</div>
+      <p>
+        깃(Git /ɡɪt/[5])은 컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 분산 버전 관리 시스템이다. 소프트웨어 개발에서 소스 코드 관리에 주로
+        사용되지만[6] 어떠한 집합의 파일의 변경사항을 지속적으로 추적하기 위해 사용될 수 있다. 기하학적 불변 이론을 바탕으로 설계됐고, 분산 버전 관리 시스템으로서 빠른 수행 속도에 중점을 두고 있는
+        것[7]이 특징이며 데이터 무결성,[8] 분산, 비선형 워크플로를 지원한다.[9]
+      </p>
+      <!-- p는 블록레벨이지만 안에 있는 text는  인라인레벨 요소임 -->
+    </div>
+    <h2>대부분의 요소에 display 값을 block으로 변경함.</h2>
+    <div class="container">
+      <div style="border: 2px solid gray">Box1</div>
+      <span style="float: right">Box2</span>
+    </div>
+  </body>
+</html>
+<!-- 
+  overflow 속성
+overflow 속성값을 auto로 설정하면, 컨테이너 요소의 크기가 자동으로 내부의 요소를 감쌀 수 있을 만큼 커지게 된다.
+ -->

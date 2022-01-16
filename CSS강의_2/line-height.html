@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>line-height</title>
+    <style>
+      .parent {
+        width: 200px;
+        font-size: 10px;
+
+        line-height: normal;
+        /* line-height: 20px;
+        line-height: 2;
+        line-height: 200%; */
+      }
+
+      .child {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="child">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+        aspernatur vitae sapiente laudantium velit quo unde cupiditate autem,
+        harum eaque natus perferendis ducimus saepe libero, voluptatibus
+        voluptates possimus. Adipisci, delectus.
+      </div>
+    </div>
+  </body>
+</html>
+<!--  
+    * number 부모 요소의 숫자 값이 그대로 상속됩니다. 즉, 자식 요소에서도 또 한 번 자식 요소의 font-size를 기준으로 계산된 값을 가집니다.
+
+    * % 부모 요소에서 %값이 그대로 상속되는 것이 아니고, %에 의해 이미 계산된 px값이 상속됩니다.
+-->
